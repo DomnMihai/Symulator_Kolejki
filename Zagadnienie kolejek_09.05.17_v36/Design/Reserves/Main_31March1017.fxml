@@ -1,0 +1,1822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="648.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Plik">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Zamknij" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Edycja">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Wyczyść wyniki" />
+                  <MenuItem mnemonicParsing="false" text="Wyczyść wszystko" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Program">
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Dokumentacja" />
+                <MenuItem mnemonicParsing="false" text="O programie" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane style="-fx-border-color: #000000;" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab text="Stopy">
+               <content>
+                  <ScrollPane fitToHeight="true">
+                     <content>
+                        <HBox>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Stopa przybyć" wrapText="true">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="wynik_1_1" editable="false" maxWidth="-Infinity" prefWidth="180.0" promptText="brak obliczeń">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Separator>
+                                       <VBox.margin>
+                                          <Insets left="-4.0" right="-4.0" />
+                                       </VBox.margin>
+                                    </Separator>
+                                    <Label text="Stopa obsługi" wrapText="true">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="wynik_1_2" editable="false" maxWidth="-Infinity" prefWidth="180.0" promptText="brak obliczeń">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Separator>
+                                       <VBox.margin>
+                                          <Insets left="-4.0" right="-4.0" />
+                                       </VBox.margin>
+                                    </Separator>
+                                    <Label fx:id="wynik_1_3_label" text="Warunek stabilności" wrapText="true">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="wynik_1_3" editable="false" maxWidth="-Infinity" prefWidth="180.0" promptText="brak obliczeń">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets bottom="-4.0" left="3.0" top="-4.0" />
+                                 </HBox.margin>
+                              </Separator>
+                              <VBox fx:id="wynik_1_3_VBox" fillWidth="false">
+                                 <children>
+                                    <Label text="Potrzeba restrukturyzacji w firmie." wrapText="true">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="3.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Przyklady restrukuryzacji:" wrapText="true">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Weryfikacja kwalifikacji zespołu." wrapText="true">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Polepszenie komunikacji wewnętrznej zespołu." wrapText="true">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Zwiększenie kwalifikacji pracowników." wrapText="true">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Zarudnienie nowego pracownika." wrapText="true">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Zwiększenie zaangażowania pracowników do swojej pracy min. przez nagrody." wrapText="true">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+          <Tab text="Wartości oczekiwane">
+               <content>
+                  <ScrollPane fitToHeight="true">
+                     <content>
+                        <HBox>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Parametr intensywności ruchu" wrapText="true">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="wynik_2_1" editable="false" maxWidth="-Infinity" prefWidth="180.0" promptText="brak obliczeń">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets bottom="-4.0" left="3.0" top="-4.0" />
+                                 </HBox.margin>
+                              </Separator>
+                              <VBox>
+                                 <children>
+                                    <Label text="Przeciętna liczba klientów oczekująca na obsługę" wrapText="true">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="wynik_2_2" editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="180.0" promptText="brak obliczeń">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Separator>
+                                       <VBox.margin>
+                                          <Insets left="-4.0" right="-4.0" />
+                                       </VBox.margin>
+                                    </Separator>
+                                    <Label prefWidth="275.0" text="Odchylenie standardowe przeciętnej liczby klientów oczekujących na obsługę" wrapText="true">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="wynik_2_3" editable="false" maxWidth="-Infinity" prefWidth="180.0" promptText="brak obliczeń">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets bottom="-4.0" left="3.0" top="-4.0" />
+                                 </HBox.margin>
+                              </Separator>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+          <Tab text="Prawdopodobieństwa">
+               <content>
+                  <ScrollPane fitToHeight="true">
+                     <content>
+                        <HBox>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Prawdopodobieństwo, że w układzie jest n klientów" wrapText="true">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox fillHeight="false">
+                                       <children>
+                                          <ChoiceBox fx:id="pr_n_3_1_1_chBox" value="więcej">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="więcej" />
+                                                   <String fx:value="więcej bądź równo" />
+                                                </FXCollections>
+                                             </items>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </ChoiceBox>
+                                          <TextField fx:id="input_n_3_1_2" maxWidth="-Infinity" prefWidth="50.0" promptText="n">
+                                             <HBox.margin>
+                                                <Insets left="1.0" right="5.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="input_n_3_1_3" maxWidth="-Infinity" prefWidth="50.0" promptText="n">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="1.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <ChoiceBox fx:id="pr_n_3_1_4_chBox" value="mniej">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="mniej" />
+                                                   <String fx:value="mniej bądź równo" />
+                                                </FXCollections>
+                                             </items>
+                                          </ChoiceBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <TextField fx:id="wynik_3_1" editable="false" maxWidth="-Infinity" prefWidth="115.0" promptText="brak obliczeń">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="blad_3_1" maxWidth="-Infinity" prefWidth="220.0" style="-fx-font-weight: bold; -fx-font-size: 13;" text="Błąd" textFill="#eb0e0e" wrapText="true">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="4.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets bottom="-4.0" left="1.0" top="-4.0" />
+                                 </HBox.margin>
+                              </Separator>
+                              <VBox>
+                                 <children>
+                                    <Label text="Prawdopodobieństwo, że czas oczekiwania w kolejce wynosi t" wrapText="true">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox fillHeight="false">
+                                       <children>
+                                          <ChoiceBox fx:id="pr_t_3_2_1_chBox" value="więcej">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="więcej" />
+                                                   <String fx:value="więcej bądź równo" />
+                                                </FXCollections>
+                                             </items>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </ChoiceBox>
+                                          <TextField fx:id="input_t_3_2_2" maxWidth="-Infinity" prefWidth="60.0" promptText="t">
+                                             <HBox.margin>
+                                                <Insets left="1.0" right="5.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="input_t_3_2_3" maxWidth="-Infinity" prefWidth="60.0" promptText="t">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="1.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <ChoiceBox fx:id="pr_t_3_2_4_chBox" value="mniej">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="mniej" />
+                                                   <String fx:value="mniej bądź równo" />
+                                                </FXCollections>
+                                             </items>
+                                          </ChoiceBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <TextField fx:id="wynik_3_2" editable="false" maxWidth="-Infinity" prefWidth="115.0" promptText="brak obliczeń">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="blad_3_2" maxWidth="-Infinity" prefWidth="240.0" style="-fx-font-weight: bold; -fx-font-size: 13;" text="Błąd" textFill="#eb0e0e" wrapText="true">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="4.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Separator>
+                                       <VBox.margin>
+                                          <Insets left="-4.0" right="-4.0" />
+                                       </VBox.margin>
+                                    </Separator>
+                                    <Label text="Prawdopodobieństwo, że w czasie t będzie obsłużono n osób" wrapText="true">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox fillHeight="false">
+                                       <children>
+                                          <TextField fx:id="input_t_3_3_1" maxWidth="-Infinity" prefWidth="80.0" promptText="t">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="input_n_3_3_2" maxWidth="-Infinity" prefWidth="80.0" promptText="n">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="1.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <TextField fx:id="wynik_3_3" editable="false" maxWidth="-Infinity" prefWidth="115.0" promptText="brak obliczeń">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="blad_3_3" maxWidth="-Infinity" prefWidth="240.0" style="-fx-font-weight: bold; -fx-font-size: 13;" text="Błąd" textFill="#eb0e0e" wrapText="true">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="4.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets bottom="-4.0" left="1.0" top="-4.0" />
+                                 </HBox.margin>
+                              </Separator>
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+        </tabs>
+         <VBox.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </VBox.margin>
+      </TabPane>
+      <HBox>
+         <children>
+            <AnchorPane style="-fx-border-color: #000000; -fx-background-color: #ffa5f7;">
+               <children>
+                  <HBox layoutX="230.0" style="-fx-border-color: #040a3a;" stylesheets="@application.css" AnchorPane.topAnchor="1.0">
+                     <children>
+                        <Label text="00:00:00">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="2.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox>
+                           <children>
+                              <Button mnemonicParsing="false" text="x1">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Play">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="x2">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Stop">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="20.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="kasa_VBox_12" layoutX="40.0" layoutY="311.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="12">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_12" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_12" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy12" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="kasa_VBox_11" layoutX="40.0" layoutY="51.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="11">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_11" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_11" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy11" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="kasa_VBox_10" layoutX="145.0" layoutY="311.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="10">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_10" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_10" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy10" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="kasa_VBox_9" layoutX="145.0" layoutY="51.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="9">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator fx:id="prind" progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_9" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_9" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy9" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="kasa_VBox_8" layoutX="250.0" layoutY="311.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="8">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_8" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_8" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy8" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="kasa_VBox_7" layoutX="250.0" layoutY="51.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="7">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_7" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_7" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy7" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="kasa_VBox_6" layoutX="355.0" layoutY="311.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="6">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_6" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_6" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy6" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="kasa_VBox_5" layoutX="355.0" layoutY="51.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="5">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_5" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_5" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy5" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="kasa_VBox_4" layoutX="460.0" layoutY="311.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="4">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_4" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_4" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy4" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="kasa_VBox_3" layoutX="460.0" layoutY="51.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="3">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_3" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_3" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy3" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="kasa_VBox_2" layoutX="565.0" layoutY="311.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="2">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_2" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_2" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy2" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="kasa_VBox_1" layoutX="565.0" layoutY="51.0" prefHeight="110.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false">
+                           <children>
+                              <ProgressIndicator progress="0.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="BOTTOM_LEFT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="czas_kasa_text_field_1" promptText="t">
+                                 <VBox.margin>
+                                    <Insets bottom="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="sd_kasa_text_field_1" promptText="sd" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" fillWidth="false" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#pressedCopyTimeToAllKasy1" text="+">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <Line endX="680.0" layoutX="3.0" layoutY="211.0" stroke="#6b0740" strokeWidth="2.0" />
+                  <Line endX="680.0" layoutX="3.0" layoutY="261.0" stroke="#6b0740" strokeWidth="2.0" />
+                  <Line endY="441.0" layoutX="760.0" layoutY="3.0" stroke="#6b0740" strokeWidth="2.0" />
+                  <AnchorPane layoutX="48.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="3.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="0">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="93.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="2">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="138.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="3">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="183.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="4">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="228.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="5">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="273.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="6">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="318.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="7">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="363.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="8">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="408.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="9">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="453.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="10">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="498.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="11">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="543.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="12">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="588.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="13">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="633.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="14">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="700.0" layoutY="216.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="700.0" layoutY="166.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="615.0" layoutY="166.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="510.0" layoutY="166.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="405.0" layoutY="166.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="300.0" layoutY="166.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="195.0" layoutY="166.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="90.0" layoutY="166.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="700.0" layoutY="266.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="klient" layoutX="405.0" layoutY="71.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="klient1" layoutX="405.0" layoutY="31.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="195.0" layoutY="361.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="klient2" layoutX="195.0" layoutY="401.0">
+                     <children>
+                        <Circle centerX="20.0" centerY="20.0" fill="#5aa3e8" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="40.0" prefWidth="40.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </AnchorPane>
+            <ScrollPane style="-fx-border-color: #000000;" HBox.hgrow="ALWAYS">
+               <content>
+                  <VBox>
+                     <children>
+                        <VBox fillWidth="false" maxWidth="-Infinity" style="-fx-border-color: #809dcc;">
+                           <children>
+                              <Label text="Jednostka czasu">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox fillHeight="false">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" onAction="#pressedJednostkaCzasuSekunda" selected="true" text="sekundy">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="jednostka_czasu" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" onAction="#pressedJednostkaCzasuMinuta" text="minuty" toggleGroup="$jednostka_czasu">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" onAction="#pressedJednostkaCzasuGodzina" text="godziny" toggleGroup="$jednostka_czasu">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox fillHeight="false">
+                           <children>
+                              <TextField fx:id="ilosc_klientow_text_field" promptText="ilość klientów">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="ilość klientów" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" top="4.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="iloscKlietnowBlad" style="-fx-font-weight: bold; -fx-font-size: 13;" text="błąd" textFill="#eb0e0e" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" top="1.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox fillHeight="false">
+                           <children>
+                              <TextField fx:id="okres_czasu_text_field" promptText="okres czasu">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="okres czasu przybycia klientów" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" top="3.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="okresCzasuPrzybyciaKlietnowBlad" style="-fx-font-weight: bold; -fx-font-size: 13;" text="błąd" textFill="#eb0e0e" wrapText="true">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" top="1.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox fillHeight="false">
+                           <children>
+                              <TextField fx:id="kanal_obslugi_text_field" promptText="ilość kanałów obsługi">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="ilość kanałów obsługi" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" top="3.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="iloscKanalowObslugiBlad" style="-fx-font-weight: bold; -fx-font-size: 13;" text="błąd" textFill="#eb0e0e" wrapText="true">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" top="1.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox fillHeight="false">
+                           <children>
+                              <TextField fx:id="sd_klientow_text_field" promptText="odchylenie standardowe">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="odchylenie standardowe czasu przybycia klientów" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" top="3.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="sdKlientowBlad" style="-fx-font-weight: bold; -fx-font-size: 13;" text="błąd" textFill="#eb0e0e" wrapText="true">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="5.0" top="1.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Separator>
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="-3.0" />
+                           </VBox.margin></Separator>
+                        <Button mnemonicParsing="false" onAction="#pressedOblicz" text="Oblicz">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label fx:id="animacjaBlad" style="-fx-font-weight: bold; -fx-font-size: 13;" text="błąd" textFill="#eb0e0e" wrapText="true">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" top="1.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="3.0" top="3.0" />
+                     </padding>
+                  </VBox>
+               </content>
+               <HBox.margin>
+                  <Insets bottom="2.0" right="2.0" />
+               </HBox.margin>
+            </ScrollPane>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
